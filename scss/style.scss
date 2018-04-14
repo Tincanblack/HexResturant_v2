@@ -1,0 +1,88 @@
+@import "var";
+@import "mixin";
+@import "reset";
+@import "grid";
+@import "layout";
+@import "page";
+
+* {
+  box-sizing: border-box;
+  -mox-box-sizing: border-box;
+  -webit-box-sizing: border-box;
+}
+
+body {
+	font-family: '微軟正黑體';
+	font-size: $base-font-size;
+	background: lighten($theme-color, 85%);
+}
+
+section {
+	padding: 50px 0;
+}
+
+.img-responsive {
+	@include img-responsive;
+	@include pad() {
+		margin-bottom: 15px;
+	}
+}
+
+.btn {
+  @include btn();
+}
+
+.pull-right {
+	@include right;
+}
+.pull-left {
+	@include left;
+}
+.pull-center {
+	@include center;
+}
+.clearfix {
+	@include clearfix;
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+.container {
+    max-width: $width;
+    padding: 0 15px;
+    margin: 0 auto;
+    @include clearfix;
+}
+
+.title h3 {
+	font-size: $h3-font-size;
+	text-align: center;
+	line-height: 2em;
+	margin-bottom: 30px;
+	position: relative;
+	&:before {
+		position: absolute;
+		content: '';
+		background: $black;
+		width: 10%;
+		right: 60%;
+		bottom: 50%;
+		height: 2px;
+	}
+	&:after {
+		position: absolute;
+		content: '';
+		background: $black;
+		width: 10%;
+		left: 60%;
+		bottom: 50%;
+		height: 2px;
+	}
+	@include pad() {
+		&:before, &:after {
+			display: none;
+		}
+	}
+}

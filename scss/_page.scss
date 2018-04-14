@@ -1,0 +1,365 @@
+/* pages-start */ 
+.services-field {
+    .services {
+        float: left;
+        width: calc(100% / 3 - 2%);
+        text-align: center;
+        margin: 0 1%;
+        @include pad() {
+            width: 98%;
+        }
+    }
+    .services-img {
+        margin-bottom: 20px;
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    .services-des {
+        h4 {
+            font-size: $h4-font-size;
+            margin-bottom: 10px;
+        }
+        line-height: 1.5em;
+    }
+}
+
+.latest-news-field {
+    background: $theme-color;
+    padding: 0;
+    .news {
+        display: table;
+    }
+    .news-img, .news-des {
+        width: calc(100% / 2 - 2%);
+        margin: 0 1%;
+        display: table-cell;
+        vertical-align: middle;
+        @include pad() {
+            width: 98%;
+            display: block;
+        }
+    }
+    .news-des {
+        color: $white;
+        h3 {
+            font-size: $h3-font-size;
+            line-height: 2em;
+        }
+        p {
+            line-height: 2em;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.customers {
+    width: calc(100% / 3 - 2%);
+    margin: 0 1%;
+    float: left;
+    @include pad() {
+        width: 98%;
+    }
+    img {
+        border-radius: 50%;
+        float: left;
+    }
+    .customers-des {
+        margin-left: 100px;
+        h4 {
+            font-size: $h4-font-size;
+            line-height: 2em;
+        }
+        p {
+            line-height: 2em;
+            &:last-child {
+                text-align: right;
+            }
+        }
+    }
+}
+
+.login-form-field, .register-form-field {
+    .member-form-wrap {
+        max-width: 300px;
+        margin: 0 auto;
+        h5 {
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: $h5-font-size;
+            color: $theme-color;
+        }
+        .member-header {
+            text-align: center;
+            margin-bottom: 30px;
+        } 
+    }
+}
+
+.member-form {
+    border-top: 3px solid $theme-sec-color;
+    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+    padding: 15px;
+    a.forget-password {
+        display: block;
+        color: $theme-sec-color;
+        margin-bottom: 30px;
+    }
+    .button-group {
+        text-align: center;
+        >a {
+            min-width: 120px;
+        }
+    }
+}
+
+.register-form-field {
+    .member-form-wrap {
+        max-width: 600px;
+        .member-information, .form-control {
+            float: left;
+            width: calc(100% / 2 - 2%);
+            margin: 0 1%;
+        }
+        .member-information {
+            line-height: 1.5em;
+            color: $theme-color;
+        }
+    }
+}
+
+
+.contact-field {
+    background: #fafafa;
+    .contact-img, .form-control {
+        width: 50%;
+        float: left;
+        @include pad() {
+            width: 100%;
+            display: block;
+        }
+    }
+    .button-group {
+        float: right;
+    }
+}
+
+.form-control {
+    label, input {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    label {
+        color: $theme-color;
+    }
+    .input-icon {
+        position: relative;
+        input {
+            padding: 6px 10px;
+            padding-left: 30px;
+        }
+        i {
+            position: absolute;
+            top: 0;
+            padding: 8px;
+            color: $theme-color;
+        }
+    }
+    input.txt {
+        border-radius: 3px;
+        line-height: 30px;
+    }
+    input.radio-btn {
+        display: inline-block;
+        width:initial;
+    }
+    .button-group {
+        .btn {
+            @include btn;
+        }
+        .cancel-btn {
+            @include cancel-btn;
+        }
+        .primary-btn {
+            @include primary-btn;
+        }
+    }
+}
+
+.side-menu-wrapper {
+    width: 25%;
+    float: left;
+    .side-menu-header {
+        margin-bottom: 15px;
+        h4 {
+            font-size: $h4-font-size;
+            color: $theme-color;
+        }
+    }
+    .side-menu {
+        margin-bottom: 20px;
+        margin-right: 20px;
+        a {
+            display: block;
+            border-bottom: 1px solid $theme-color;
+            padding: 15px 10px;
+            transition: all .5s;
+            color: $theme-color;
+            &:hover {
+                background: $theme-color;
+                color: $white;
+            }
+        }
+        @include mobile() {
+            margin-bottom: 20px;
+            margin-right: 0;
+        }
+    }
+    @include mobile() {
+        width: 98%;
+        margin: 0 1%;
+    }
+}
+
+.products-list-wrapper {
+    width: 75%;
+    float: left;
+    .products-list-header {
+        margin-bottom: 35px;
+    }
+    .serach-field {
+        float: left;
+        width: 80%;
+        position: relative;
+        input {
+            width: 100%;
+            border: 2px solid $theme-color;
+            line-height: 30px;
+        }
+        button {
+            position: absolute;
+            border: 0;
+            top: 0;
+            right: 0;
+            padding: 10px;
+            cursor: pointer;
+            width: 36px;
+            height: 36px;
+            color: $white;
+            background: $theme-color;
+        }
+        @include mobile() {
+            width: 100%;
+        }
+    }
+    .checkout-field {
+        margin: 10px 15px;
+        float: right;
+        color: $theme-color;
+        a {
+            color: $theme-color;
+        }
+        @include mobile() {
+            margin: 10px 0;
+            text-align: right;
+        }
+    }
+    @include mobile() {
+        width: 98%;
+        margin: 0 1%;
+    }
+}
+
+.products-list {
+    display: inline-block;
+    width: 100%;
+}
+.products {
+    float: left;
+    position: relative;
+    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right: 2%;
+    width: 23%;
+    min-height: 300px;
+    &:nth-child(4n) {
+        margin-right: 0;
+    }
+    .product-tag {
+        position: absolute;
+        right: -6px;
+        top: -6px;
+        z-index: 100;
+    }
+    >i {
+        position: absolute;
+        color: $white;
+        top: 0;
+        left: 0;
+        font-size: 20px;
+        margin: 5px;
+        z-index: 100;
+        cursor: pointer;
+    }
+    @include desktop() {
+        width: 48%;
+        margin: 0 1% 30px;
+    }
+    @include mobile() {
+        width: 98%;
+        margin: 0 1% 15px;
+    }
+}
+.product-img {
+    overflow: hidden;
+    a {
+        display: block;
+        img {
+            opacity: 1;
+            transition: all .5s;
+        }
+        &:hover img {
+            opacity: 0.6;
+        }
+    }
+}
+.product-des {
+    padding: 10px;
+    h4 {
+        font-size: $h4-font-size;
+        color: $theme-color;
+        margin: 10px 0;
+    }
+    p {
+        color: $theme-color;
+        min-height: 50px;
+    }
+    hr {
+        color: $theme-color;
+        margin-bottom: 20px;
+        width: 60%;
+    }
+    .count  {
+        margin: 20px 0;
+        font-size: 20px;
+    }
+    .add-cart {
+        background: transparent;
+        border: 2px solid $theme-sec-color;
+        color: $theme-sec-color;
+        &:hover {
+            background: $theme-sec-color;
+            color: $white;
+        }
+        &.active {
+            background: $theme-sec-color;
+            color: $white;
+            cursor: not-allowed;
+        }
+    }
+}

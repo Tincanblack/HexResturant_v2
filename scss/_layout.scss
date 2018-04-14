@@ -1,0 +1,160 @@
+/* header&footer */ 
+header {
+	background: rgba(0, 0, 0, 0.8);
+	padding: 20px 0;
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+	transition: all .5s;
+	&.active {
+		background: $black;
+	}
+	.logo {
+	float: left;
+	margin: 5px 1%;
+		a {
+			display: block;
+			@include logo(logo_w,png);
+		}
+	}
+	.nav {
+		float: right;
+		li {
+			float: left;
+			@include pad() {
+				float: none;
+				border-top: 1px solid #fff;
+			}
+		}
+		a {
+			display: block;
+			padding: 15px;
+			color: $white;
+			transition: all .5s;
+			&:hover {
+				color: $theme-sec-color;
+			}
+		}
+		@include pad() {
+			position: absolute;
+		    top: 64px;
+		    left: 0;
+		    width: 100%;
+		    background: #000;
+		    max-height: 0;
+		    overflow: hidden;
+		    opacity: 0.8;
+		    text-align: center;
+		    transition: all .5s;
+		}
+		&.active {
+			max-height: 500px;
+		}
+	}
+	a.nav-mobile-btn {
+		display: none;
+		@include pad() {
+			display: block;
+			float: right;
+			color: $white;
+			margin: 5px;
+		}
+	}
+}
+
+.home-banner {
+	position: relative;
+	background: url(../img/header_desktop@2x.png);
+	height: 768px;
+	width: 100%;
+	.banner-txt {
+		position: absolute;
+		background: rgba(0,0,0,0.4);
+		top: calc(50% - 60px);
+		left: calc(50% - 191px);
+		text-align: center;
+		padding: 15px;
+		min-width: 300px;
+		color: $white;
+		h2 {
+			font-size: $h2-font-size;
+			line-height: 2em;
+		}
+		p {
+			line-height: 1.5em;
+		}
+		@include mobile() {
+			width: 100%;
+			left: 0;
+		}
+	}
+	@include desktop() {
+		background: url(../img/header_desktop.png) no-repeat;
+		height: 420px;
+		background-size: cover;
+	}
+
+	@include pad() {
+		background: url(../img/header_mobile.png) no-repeat;
+		height: 420px;
+		background-size: cover;
+	}
+}
+section.footer-field {
+	padding-bottom: 0;
+}
+.footer-about, .footer-contact {
+	width: calc(100% / 3 - 2%);
+	margin: 0 1%;
+	float: left;
+	h3 {
+		font-size: $h3-font-size;
+		margin-bottom: 10px;
+	}
+	p {
+		line-height: 2em;
+	}
+	@include pad() {
+		width: 98%;
+		display: block;
+		margin-bottom: 15px;
+	}
+}
+.footer-contact {
+	ul {
+		padding-left: 20px;
+	}
+	li {
+		list-style: disc;
+		margin: 16px 0;
+	}
+}
+.footer-socialLink {
+	float: right;
+	position: relative;
+	margin: 0 1%;
+	.footer-logo {
+		float: right;
+	}
+	.social-link {
+		position: absolute;
+		right: 0;
+		li {
+			float: left;
+			margin-top: 30px;
+			margin-left: 20px;
+		}
+		a.facebook, a.google, a.twitter {
+			font-size: 36px;
+		}
+		a.facebook {
+			color: #DB4437;
+		}
+		a.google {
+			color: #41ABE1;
+		}
+		a.twitter {
+			color: #3A5795;	
+		}
+	}
+}
